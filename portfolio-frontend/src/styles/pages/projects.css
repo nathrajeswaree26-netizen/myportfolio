@@ -1,0 +1,1708 @@
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+.projects-page {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 100px 8% 80px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(124, 58, 237, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(6, 182, 212, 0.07),
+      transparent 30%
+    ),
+    #07070c;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.projects-background {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* Large Purple Glow */
+
+.projects-background::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  top: -250px;
+  left: -200px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.16),
+      rgba(124, 58, 237, 0.04) 45%,
+      transparent 70%
+    );
+
+  filter: blur(20px);
+}
+
+
+/* Large Cyan Glow */
+
+.projects-background::after {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  right: -220px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(6, 182, 212, 0.14),
+      rgba(6, 182, 212, 0.03) 45%,
+      transparent 70%
+    );
+
+  filter: blur(25px);
+}
+
+
+/* =========================================
+   ORIGINAL GLOW ORBS
+========================================= */
+
+.projects-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(75px);
+
+  opacity: 0.18;
+
+  animation: floatingGlow 10s ease-in-out infinite;
+}
+
+
+.projects-glow-one {
+  width: 300px;
+  height: 300px;
+
+  top: 8%;
+  left: -120px;
+
+  background: #7c3aed;
+}
+
+
+.projects-glow-two {
+  width: 320px;
+  height: 320px;
+
+  right: -120px;
+  top: 45%;
+
+  background: #06b6d4;
+
+  animation-delay: -4s;
+}
+
+
+/* =========================================
+   FLOATING GLASS BUBBLE 1
+========================================= */
+
+.projects-background .bubble-one {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  top: 18%;
+  left: 4%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.25),
+      transparent 18%
+    ),
+    radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.12),
+      rgba(139, 92, 246, 0.02) 65%,
+      transparent 75%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    inset -15px -15px 30px rgba(139, 92, 246, 0.08),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.03),
+    0 0 45px rgba(139, 92, 246, 0.08);
+
+  backdrop-filter: blur(5px);
+
+  animation: bubbleFloatOne 12s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FLOATING GLASS BUBBLE 2
+========================================= */
+
+.projects-background .bubble-two {
+  position: absolute;
+
+  width: 85px;
+  height: 85px;
+
+  top: 55%;
+  right: 5%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.22),
+      transparent 18%
+    ),
+    radial-gradient(
+      circle,
+      rgba(6, 182, 212, 0.12),
+      rgba(6, 182, 212, 0.02) 65%,
+      transparent 75%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    inset -10px -10px 25px rgba(6, 182, 212, 0.08),
+    0 0 35px rgba(6, 182, 212, 0.08);
+
+  backdrop-filter: blur(5px);
+
+  animation: bubbleFloatTwo 9s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FLOATING GLASS BUBBLE 3
+========================================= */
+
+.projects-background .bubble-three {
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  top: 38%;
+  left: 46%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.20),
+      transparent 20%
+    ),
+    rgba(236, 72, 153, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 30px rgba(236, 72, 153, 0.08);
+
+  animation: bubbleFloatThree 11s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.project-particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.35);
+
+  animation: particleFloat 8s ease-in-out infinite;
+}
+
+
+.particle-1 {
+  top: 12%;
+  left: 25%;
+
+  animation-delay: -1s;
+}
+
+
+.particle-2 {
+  top: 30%;
+  right: 20%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: -3s;
+}
+
+
+.particle-3 {
+  top: 52%;
+  left: 8%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: -5s;
+}
+
+
+.particle-4 {
+  top: 72%;
+  left: 30%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: -2s;
+}
+
+
+.particle-5 {
+  top: 82%;
+  right: 25%;
+
+  width: 5px;
+  height: 5px;
+
+  animation-delay: -6s;
+}
+
+
+.particle-6 {
+  top: 40%;
+  right: 8%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: -4s;
+}
+
+
+/* =========================================
+   BACKGROUND ANIMATIONS
+========================================= */
+
+@keyframes floatingGlow {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(30px, -40px, 0)
+      scale(1.08);
+  }
+}
+
+
+@keyframes bubbleFloatOne {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(0deg);
+  }
+
+  25% {
+    transform:
+      translate3d(30px, -25px, 0)
+      rotate(8deg);
+  }
+
+  50% {
+    transform:
+      translate3d(10px, -55px, 0)
+      rotate(15deg);
+  }
+
+  75% {
+    transform:
+      translate3d(-25px, -25px, 0)
+      rotate(8deg);
+  }
+}
+
+
+@keyframes bubbleFloatTwo {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-35px, -45px, 0)
+      scale(1.12);
+  }
+}
+
+
+@keyframes bubbleFloatThree {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translateY(-35px)
+      scale(1.15);
+  }
+}
+
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+
+    opacity: 0.3;
+  }
+
+  50% {
+    transform:
+      translateY(-25px)
+      scale(1.4);
+
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.projects-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.projects-header {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+
+.projects-label {
+  margin: 0 0 12px !important;
+
+  color: #a78bfa !important;
+
+  font-size: 0.78rem !important;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+.projects-header h1 {
+  margin: 0 0 18px;
+
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #a78bfa,
+      #22d3ee
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.projects-header h1 span {
+  color: #a78bfa;
+}
+
+
+.projects-intro {
+  max-width: 720px;
+
+  margin: 0 auto !important;
+
+  color: #a1a1aa !important;
+
+  font-size: 1rem !important;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   BASE PROJECT CARD
+========================================= */
+
+.project-card {
+  --card-color: #8b5cf6;
+  --card-color-light: #a78bfa;
+  --card-glow: rgba(139, 92, 246, 0.18);
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 430px;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD COLORS
+========================================= */
+
+
+/* 01 - Rumor Detection */
+
+.project-01 {
+  --card-color: #8b5cf6;
+  --card-color-light: #c4b5fd;
+  --card-glow: rgba(139, 92, 246, 0.22);
+}
+
+
+/* 02 - BERT Odia */
+
+.project-02 {
+  --card-color: #06b6d4;
+  --card-color-light: #67e8f9;
+  --card-glow: rgba(6, 182, 212, 0.20);
+}
+
+
+/* 03 - Return Issue & Desk */
+
+.project-03 {
+  --card-color: #3b82f6;
+  --card-color-light: #93c5fd;
+  --card-glow: rgba(59, 130, 246, 0.20);
+}
+
+
+/* 04 - Multilingual */
+
+.project-04 {
+  --card-color: #ec4899;
+  --card-color-light: #f9a8d4;
+  --card-glow: rgba(236, 72, 153, 0.20);
+}
+
+
+/* 05 - Hate Speech */
+
+.project-05 {
+  --card-color: #ef4444;
+  --card-color-light: #fca5a5;
+  --card-glow: rgba(239, 68, 68, 0.20);
+}
+
+
+/* 06 - Bank Management - Java Swing */
+
+.project-06 {
+  --card-color: #10b981;
+  --card-color-light: #6ee7b7;
+  --card-glow: rgba(16, 185, 129, 0.20);
+}
+
+
+/* 07 - E-Commerce */
+
+.project-07 {
+  --card-color: #f97316;
+  --card-color-light: #fdba74;
+  --card-glow: rgba(249, 115, 22, 0.20);
+}
+
+
+/* 08 - Personal Portfolio */
+
+.project-08 {
+  --card-color: #6366f1;
+  --card-color-light: #a5b4fc;
+  --card-glow: rgba(99, 102, 241, 0.22);
+}
+
+
+/* =========================================
+   CARD GLOW
+========================================= */
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -120px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: var(--card-glow);
+
+  filter: blur(45px);
+
+  pointer-events: none;
+
+  transition: all 0.4s ease;
+}
+
+
+/* Bottom Glow */
+
+.project-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  bottom: -120px;
+  left: -80px;
+
+  border-radius: 50%;
+
+  background: var(--card-glow);
+
+  filter: blur(55px);
+
+  opacity: 0.45;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.project-card:hover {
+  transform: translateY(-10px);
+
+  border-color: var(--card-color);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 35px var(--card-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+.project-card:hover::before {
+  transform: scale(1.3);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   TOP SECTION
+========================================= */
+
+.project-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   PROJECT ICON
+========================================= */
+
+.project-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 16px;
+
+  background: var(--card-glow);
+
+  border:
+    1px solid var(--card-color);
+
+  font-size: 1.7rem;
+
+  box-shadow:
+    0 0 20px var(--card-glow);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.project-card:hover .project-icon {
+  transform:
+    scale(1.08)
+    rotate(-3deg);
+}
+
+
+/* =========================================
+   PROJECT NUMBER
+========================================= */
+
+.project-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid var(--card-color);
+
+  color: var(--card-color-light);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.project-status {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: var(--card-glow);
+
+  border:
+    1px solid var(--card-color);
+
+  color: var(--card-color-light);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+
+/* Status Dot */
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--card-color-light);
+
+  box-shadow:
+    0 0 8px var(--card-color);
+
+  animation:
+    statusPulse 2s infinite;
+}
+
+
+@keyframes statusPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+========================================= */
+
+.project-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.project-card h2 {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-size: 1.4rem;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.project-card:hover h2 {
+  color: var(--card-color-light);
+}
+
+
+.project-card p {
+  margin: 0;
+
+  color: #a1a1aa;
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.project-technologies {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: auto;
+
+  padding-top: 22px;
+
+  margin-bottom: 24px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.technology-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+}
+
+
+.technology-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 5px 8px;
+}
+
+
+.project-tag {
+  color: #c4c4ce;
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.project-tag:hover {
+  color: var(--card-color-light);
+}
+
+
+.technology-comma {
+  margin-left: 7px;
+
+  color: #666673;
+}
+
+
+/* =========================================
+   PROJECT ACTIONS
+========================================= */
+
+.project-actions {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 42px;
+}
+
+
+.project-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+/* Primary */
+
+.project-btn.primary {
+  background: var(--card-color);
+
+  border:
+    1px solid var(--card-color);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 18px var(--card-glow);
+}
+
+
+.project-btn.primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 25px var(--card-glow);
+
+  filter: brightness(1.12);
+}
+
+
+/* Secondary */
+
+.project-btn.secondary {
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  color: #e4e4e7;
+}
+
+
+.project-btn.secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--card-color);
+
+  color: var(--card-color-light);
+
+  background: var(--card-glow);
+}
+
+
+/* =========================================
+   PROJECT PRIVATE
+========================================= */
+
+.project-private {
+  color: #71717a;
+
+  font-size: 0.78rem;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.project-card-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--card-color),
+      transparent
+    );
+
+  opacity: 0.5;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+.project-card:hover .project-card-line {
+  opacity: 1;
+}
+
+
+/* =========================================
+   STATUS TYPES
+========================================= */
+
+.project-status.completed {
+  background: var(--card-glow);
+}
+
+
+.project-status.research {
+  background: var(--card-glow);
+}
+
+
+.project-status.development {
+  background: var(--card-glow);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .projects-page {
+    padding: 90px 5% 60px;
+  }
+
+  .projects-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 400px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .projects-page {
+    padding: 80px 20px 50px;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .projects-intro {
+    font-size: 0.9rem !important;
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-card {
+    min-height: 0;
+
+    padding: 23px;
+
+    border-radius: 18px;
+  }
+
+  .project-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 1.5rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    font-size: 0.87rem;
+  }
+
+  .project-actions {
+    flex-wrap: wrap;
+  }
+
+  .project-btn {
+    flex: 1;
+
+    min-width: 120px;
+  }
+
+  .project-technologies {
+    padding-top: 18px;
+  }
+
+  .project-tag {
+    font-size: 0.76rem;
+  }
+
+  /* Smaller background bubbles */
+
+  .projects-background .bubble-one {
+    width: 80px;
+    height: 80px;
+
+    left: -20px;
+  }
+
+  .projects-background .bubble-two {
+    width: 60px;
+    height: 60px;
+
+    right: -10px;
+  }
+
+  .projects-background .bubble-three {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .projects-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .project-btn {
+    width: 100%;
+  }
+
+}
+/* =========================================
+   VISIBLE FLOATING BUBBLES
+========================================= */
+
+.bubble {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.35),
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 65% 65%,
+      var(--bubble-color),
+      transparent 70%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    inset -15px -15px 30px rgba(255, 255, 255, 0.03),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.08),
+    0 0 35px var(--bubble-glow);
+
+  backdrop-filter: blur(4px);
+
+  -webkit-backdrop-filter: blur(4px);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   BUBBLE 1 - PURPLE
+========================================= */
+
+.bubble-one {
+  --bubble-color: rgba(139, 92, 246, 0.28);
+  --bubble-glow: rgba(139, 92, 246, 0.35);
+
+  width: 120px;
+  height: 120px;
+
+  top: 12%;
+  left: 3%;
+
+  animation: bubbleOne 9s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BUBBLE 2 - CYAN
+========================================= */
+
+.bubble-two {
+  --bubble-color: rgba(6, 182, 212, 0.28);
+  --bubble-glow: rgba(6, 182, 212, 0.35);
+
+  width: 85px;
+  height: 85px;
+
+  top: 35%;
+  right: 4%;
+
+  animation: bubbleTwo 11s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BUBBLE 3 - PINK
+========================================= */
+
+.bubble-three {
+  --bubble-color: rgba(236, 72, 153, 0.25);
+  --bubble-glow: rgba(236, 72, 153, 0.30);
+
+  width: 65px;
+  height: 65px;
+
+  top: 58%;
+  left: 7%;
+
+  animation: bubbleThree 8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BUBBLE 4 - BLUE
+========================================= */
+
+.bubble-four {
+  --bubble-color: rgba(59, 130, 246, 0.25);
+  --bubble-glow: rgba(59, 130, 246, 0.30);
+
+  width: 145px;
+  height: 145px;
+
+  top: 68%;
+  right: 8%;
+
+  animation: bubbleFour 13s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BUBBLE 5 - GREEN
+========================================= */
+
+.bubble-five {
+  --bubble-color: rgba(16, 185, 129, 0.25);
+  --bubble-glow: rgba(16, 185, 129, 0.30);
+
+  width: 45px;
+  height: 45px;
+
+  top: 22%;
+  left: 48%;
+
+  animation: bubbleFive 7s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BUBBLE ANIMATIONS
+========================================= */
+
+/* =========================================
+   PREMIUM HIGHLIGHT COLOR BUBBLES
+========================================= */
+
+.bubble {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  opacity: 0.72;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background:
+    radial-gradient(
+      circle at 28% 22%,
+      rgba(255, 255, 255, 0.38),
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 65% 65%,
+      var(--bubble-color),
+      transparent 68%
+    );
+
+  box-shadow:
+    inset -18px -18px 35px rgba(0, 0, 0, 0.12),
+    inset 12px 12px 25px rgba(255, 255, 255, 0.08),
+    0 0 35px var(--bubble-glow),
+    0 0 70px var(--bubble-glow);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* =========================================
+   PURPLE BUBBLE
+========================================= */
+
+.bubble-one {
+  --bubble-color: rgba(139, 92, 246, 0.32);
+  --bubble-glow: rgba(139, 92, 246, 0.42);
+
+  width: 135px;
+  height: 135px;
+
+  top: 10%;
+  left: 3%;
+
+  animation: bubbleOne 10s ease-in-out infinite;
+}
+
+
+/* =========================================
+   CYAN BUBBLE
+========================================= */
+
+.bubble-two {
+  --bubble-color: rgba(6, 182, 212, 0.30);
+  --bubble-glow: rgba(6, 182, 212, 0.40);
+
+  width: 95px;
+  height: 95px;
+
+  top: 30%;
+  right: 4%;
+
+  animation: bubbleTwo 12s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PINK BUBBLE
+========================================= */
+
+.bubble-three {
+  --bubble-color: rgba(236, 72, 153, 0.30);
+  --bubble-glow: rgba(236, 72, 153, 0.40);
+
+  width: 70px;
+  height: 70px;
+
+  top: 55%;
+  left: 5%;
+
+  animation: bubbleThree 9s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BLUE BUBBLE
+========================================= */
+
+.bubble-four {
+  --bubble-color: rgba(59, 130, 246, 0.30);
+  --bubble-glow: rgba(59, 130, 246, 0.40);
+
+  width: 150px;
+  height: 150px;
+
+  top: 68%;
+  right: 7%;
+
+  animation: bubbleFour 13s ease-in-out infinite;
+}
+
+
+/* =========================================
+   GREEN BUBBLE
+========================================= */
+
+.bubble-five {
+  --bubble-color: rgba(16, 185, 129, 0.30);
+  --bubble-glow: rgba(16, 185, 129, 0.38);
+
+  width: 48px;
+  height: 48px;
+
+  top: 20%;
+  left: 48%;
+
+  animation: bubbleFive 8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ORANGE SMALL BUBBLE
+========================================= */
+
+.projects-background::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  top: 75%;
+  left: 28%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.30),
+      transparent 13%
+    ),
+    rgba(249, 115, 22, 0.22);
+
+  border: 1px solid rgba(249, 115, 22, 0.35);
+
+  box-shadow:
+    0 0 40px rgba(249, 115, 22, 0.35);
+
+  animation: orangeBubble 11s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BUBBLE ANIMATIONS
+========================================= */
+
+@keyframes bubbleOne {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(45px, -35px, 0)
+      scale(1.12);
+  }
+}
+
+
+@keyframes bubbleTwo {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-40px, 45px, 0)
+      scale(1.15);
+  }
+}
+
+
+@keyframes bubbleThree {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(35px, -45px, 0)
+      scale(1.1);
+  }
+}
+
+
+@keyframes bubbleFour {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-45px, -35px, 0)
+      scale(1.08);
+  }
+}
+
+
+@keyframes bubbleFive {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-25px, 35px, 0)
+      scale(1.18);
+  }
+}
+
+
+@keyframes orangeBubble {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform:
+      translate3d(35px, -30px, 0);
+  }
+}

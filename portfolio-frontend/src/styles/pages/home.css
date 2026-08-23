@@ -1,0 +1,590 @@
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+  position: relative;
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 25px 7% 35px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(99, 102, 241, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(139, 92, 246, 0.1),
+      transparent 30%
+    ),
+    #050507;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.home-background {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.25;
+}
+
+.glow-one {
+  width: 300px;
+  height: 300px;
+
+  top: 10%;
+  left: 5%;
+
+  background: #6366f1;
+}
+
+.glow-two {
+  width: 250px;
+  height: 250px;
+
+  right: 5%;
+  bottom: 10%;
+
+  background: #8b5cf6;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.home-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.home-content {
+  max-width: 750px;
+
+  /* Move left-side text downward */
+  transform: translateY(45px);
+}
+
+
+/* Greeting */
+
+.home-greeting {
+  margin: 0 0 8px;
+
+  color: #a1a1aa;
+
+  font-size: 16px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* Name */
+
+.home-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(46px, 5.5vw, 76px);
+
+  line-height: 1.02;
+
+  font-weight: 800;
+}
+
+.home-content h1 span {
+  color: #8b5cf6;
+}
+
+
+/* Job title */
+
+.home-content h2 {
+  margin: 15px 0;
+
+  color: #d4d4d8;
+
+  font-size: clamp(21px, 2.7vw, 30px);
+
+  font-weight: 600;
+}
+
+
+/* Description */
+
+.home-description {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #a1a1aa;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.home-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+
+/* Primary */
+
+.primary-btn {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.25);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(99, 102, 241, 0.4);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SKILLS SUMMARY
+========================================================= */
+
+.home-stats {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.stat-card {
+  min-width: 115px;
+
+  padding: 14px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.stat-card p {
+  margin: 0;
+
+  color: #71717a;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RIGHT PROFILE IMAGE
+========================================================= */
+
+.home-image-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 380px;
+
+  /* Move photo downward */
+  transform: translateY(45px);
+}
+
+
+/* Purple glow */
+
+.home-image-glow {
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  filter: blur(100px);
+
+  opacity: 0.25;
+}
+
+
+/* Glass image card */
+
+.home-image-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(340px, 100%);
+
+  padding: 10px;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45);
+
+  transition: 0.4s ease;
+}
+
+.home-image-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 25px 70px rgba(99, 102, 241, 0.25);
+}
+
+
+/* =========================================================
+   ACTUAL PROFILE IMAGE
+========================================================= */
+
+.home-image {
+  display: block;
+
+  width: 100%;
+
+  height: 360px;
+
+  border-radius: 18px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  background: #111116;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .home-page {
+    min-height: auto;
+
+    padding: 35px 6% 45px;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 35px;
+  }
+
+  .home-content {
+    margin: auto;
+
+    /* Reset desktop movement */
+    transform: translateY(0);
+  }
+
+  .home-description {
+    margin: auto;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-stats {
+    justify-content: center;
+  }
+
+
+  /* Image above content */
+
+  .home-image-wrapper {
+    order: -1;
+
+    min-height: auto;
+
+    /* Reset desktop movement */
+    transform: translateY(0);
+  }
+
+  .home-image-card {
+    width: 290px;
+  }
+
+  .home-image {
+    height: 340px;
+  }
+
+  .home-image-glow {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .home-page {
+    min-height: auto;
+
+    padding: 25px 20px 40px;
+  }
+
+  .home-container {
+    gap: 30px;
+  }
+
+
+  /* Image */
+
+  .home-image-wrapper {
+    min-height: auto;
+
+    transform: translateY(0);
+  }
+
+  .home-image-card {
+    width: 245px;
+
+    padding: 8px;
+
+    border-radius: 20px;
+  }
+
+  .home-image {
+    height: 300px;
+
+    border-radius: 15px;
+  }
+
+  .home-image-glow {
+    width: 210px;
+    height: 210px;
+  }
+
+
+  /* Greeting */
+
+  .home-greeting {
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* Name */
+
+  .home-content h1 {
+    font-size: 42px;
+  }
+
+
+  /* Title */
+
+  .home-content h2 {
+    font-size: 19px;
+
+    margin: 14px 0;
+  }
+
+
+  /* Description */
+
+  .home-description {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .home-buttons {
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+
+  /* Stats */
+
+  .home-stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 25px;
+  }
+
+  .stat-card {
+    min-width: 0;
+
+    padding: 13px 10px;
+  }
+
+  .stat-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .home-page {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 37px;
+  }
+
+  .home-content h2 {
+    font-size: 17px;
+  }
+
+  .home-image-card {
+    width: 220px;
+  }
+
+  .home-image {
+    height: 275px;
+  }
+}

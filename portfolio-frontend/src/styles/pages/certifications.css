@@ -1,0 +1,1087 @@
+/* =========================================================
+   CERTIFICATIONS PAGE
+========================================================= */
+
+.certifications-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 110px 30px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(130, 70, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(0, 220, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 50, 180, 0.09),
+      transparent 35%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.certifications-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FLOATING ORBS
+========================================================= */
+
+.certifications-orb {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.orb-one {
+  top: 100px;
+  left: -150px;
+
+  background: rgba(130, 60, 255, 0.16);
+}
+
+.orb-two {
+  right: -150px;
+  bottom: 100px;
+
+  background: rgba(0, 200, 255, 0.13);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.certifications-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1250px, 100%);
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.certifications-header {
+  max-width: 850px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+.certification-mini-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  color: rgba(255,255,255,0.55);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+
+.certification-mini-label span {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255,255,255,0.3);
+}
+
+
+.certifications-header h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(42px, 6vw, 76px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+}
+
+
+.certifications-header h1 strong {
+  display: inline-block;
+
+  margin: 0 12px;
+
+  color: rgba(255,255,255,0.3);
+
+  font-weight: 300;
+}
+
+
+.certifications-header p {
+  max-width: 720px;
+
+  margin: 25px auto 0;
+
+  color: rgba(255,255,255,0.62);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CERTIFICATION GRID
+========================================================= */
+
+.certifications-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.certification-card {
+  position: relative;
+
+  min-height: 440px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.035)
+    );
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.28);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.certification-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255,255,255,0.3);
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================================
+   COLOR TOP LINE
+========================================================= */
+
+.certification-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 15%;
+
+  width: 70%;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: currentColor;
+
+  box-shadow:
+    0 0 25px currentColor;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   COLOR THEMES
+========================================================= */
+
+.certification-card.purple {
+  color: #a879ff;
+}
+
+.certification-card.blue {
+  color: #43a8ff;
+}
+
+.certification-card.cyan {
+  color: #22e0e8;
+}
+
+.certification-card.pink {
+  color: #ff69c8;
+}
+
+.certification-card.orange {
+  color: #ff9b4a;
+}
+
+.certification-card.green {
+  color: #55e6a5;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.certificate-number {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  color: rgba(255,255,255,0.12);
+
+  font-size: 60px;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.certificate-decoration {
+  position: absolute;
+
+  right: -80px;
+  top: 80px;
+
+  width: 190px;
+  height: 190px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 50%;
+
+  opacity: 0.12;
+}
+
+
+.certificate-decoration::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 25px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.certificate-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 0 25px currentColor;
+
+  font-size: 28px;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.certificate-category {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 9px;
+
+  color: currentColor;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.certification-card h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: 23px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   PROVIDER
+========================================================= */
+
+.certificate-provider {
+  margin: 0 0 15px;
+
+  color: rgba(255,255,255,0.42);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.certificate-description {
+  margin: 0;
+
+  color: rgba(255,255,255,0.58);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.certificate-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+
+.certificate-skills span {
+  padding: 6px 10px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.045);
+
+  color: rgba(255,255,255,0.68);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.certificate-card-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+
+  padding-top: 25px;
+}
+
+
+.certificate-date {
+  color: rgba(255,255,255,0.45);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.view-certificate {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 14px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.view-certificate:hover {
+  transform: translateY(-3px);
+
+  background: currentColor;
+
+  box-shadow:
+    0 0 25px currentColor;
+}
+
+
+.view-certificate b {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.view-certificate:hover b {
+  transform: translate(2px,-2px);
+}
+
+
+/* =========================================================
+   FULL SCREEN LIGHTBOX
+========================================================= */
+
+.certificate-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999999;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(35,40,75,0.98),
+      rgba(2,3,10,0.99)
+    );
+
+  backdrop-filter: blur(25px);
+
+  animation: lightboxOpen 0.25s ease;
+}
+
+
+@keyframes lightboxOpen {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   LIGHTBOX HEADER
+========================================================= */
+
+.certificate-lightbox-header {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 75px;
+
+  padding: 10px 25px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(5,6,15,0.8);
+
+  backdrop-filter: blur(20px);
+}
+
+
+.certificate-lightbox-header small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: rgba(255,255,255,0.4);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+.certificate-lightbox-header h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.lightbox-close {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+
+  background: rgba(255,255,255,0.15);
+}
+
+
+/* =========================================================
+   IMAGE CONTENT
+========================================================= */
+
+.certificate-lightbox-content {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 90px;
+}
+
+
+.certificate-image-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.certificate-large-image {
+  display: block;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,0.75);
+
+  animation: imageAppear 0.3s ease;
+}
+
+
+@keyframes imageAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.lightbox-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 10;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(15px);
+
+  color: white;
+
+  font-size: 44px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.lightbox-arrow:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+
+.lightbox-left {
+  left: 20px;
+}
+
+
+.lightbox-right {
+  right: 20px;
+}
+
+
+.lightbox-left:hover {
+  transform:
+    translateY(-50%)
+    translateX(-4px);
+}
+
+
+.lightbox-right:hover {
+  transform:
+    translateY(-50%)
+    translateX(4px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.certificate-lightbox-footer {
+  min-height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  padding: 8px 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(5,6,15,0.8);
+
+  color: rgba(255,255,255,0.6);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.certificate-thumbnails {
+  display: flex;
+
+  gap: 7px;
+}
+
+
+.thumbnail {
+  width: 45px;
+  height: 35px;
+
+  padding: 2px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  opacity: 0.5;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.thumbnail.active {
+  border-color: white;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   KEYBOARD HINT
+========================================================= */
+
+.keyboard-hint {
+  color: rgba(255,255,255,0.3);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .certifications-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .certifications-page {
+    padding: 75px 16px;
+  }
+
+
+  .certifications-header {
+    margin-bottom: 45px;
+  }
+
+
+  .certifications-header h1 {
+    font-size: 42px;
+  }
+
+
+  .certifications-header h1 strong {
+    margin: 0 5px;
+  }
+
+
+  .certifications-header p {
+    font-size: 14px;
+  }
+
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .certification-card {
+    min-height: 410px;
+
+    padding: 25px;
+  }
+
+
+  .certificate-card-bottom {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .view-certificate {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+
+  /* Lightbox */
+
+  .certificate-lightbox-header {
+    min-height: 65px;
+
+    padding: 8px 12px;
+  }
+
+
+  .certificate-lightbox-header h2 {
+    max-width: calc(100vw - 80px);
+
+    overflow: hidden;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+
+
+  .lightbox-close {
+    width: 40px;
+    height: 40px;
+
+    font-size: 27px;
+  }
+
+
+  .certificate-lightbox-content {
+    padding: 10px 48px;
+  }
+
+
+  .certificate-large-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+  .lightbox-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 32px;
+  }
+
+
+  .lightbox-left {
+    left: 5px;
+  }
+
+
+  .lightbox-right {
+    right: 5px;
+  }
+
+
+  .certificate-lightbox-footer {
+    min-height: 50px;
+
+    gap: 10px;
+  }
+
+
+  .keyboard-hint {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .certification-card {
+    padding: 21px;
+  }
+
+
+  .certification-card h2 {
+    font-size: 20px;
+  }
+
+
+  .certificate-lightbox-content {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+}

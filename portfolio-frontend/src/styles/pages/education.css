@@ -1,0 +1,660 @@
+
+.education-page {
+  min-height: 100vh;
+  padding: 120px 6% 80px;
+}
+
+.education-container {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+}
+
+/* Header */
+
+.education-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.education-header h1 {
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: 0;
+}
+
+.education-header h1 span {
+  color: #a855f7;
+}
+
+.education-header > p:last-child {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #a1a1aa;
+  line-height: 1.8;
+}
+
+/* Timeline */
+
+.education-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 80px;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(168, 85, 247, 0.7),
+    rgba(168, 85, 247, 0.2),
+    transparent
+  );
+}
+
+.education-item {
+  width: 50%;
+  position: relative;
+  padding: 0 45px 55px;
+}
+
+.education-item.left {
+  margin-right: auto;
+  text-align: right;
+}
+
+.education-item.right {
+  margin-left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 15px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(20, 20, 25, 0.95);
+  border: 1px solid rgba(168, 85, 247, 0.6);
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.25);
+
+  z-index: 2;
+}
+
+.education-item.left .timeline-dot {
+  right: -23px;
+}
+
+.education-item.right .timeline-dot {
+  left: -23px;
+}
+
+.education-card {
+  padding: 30px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+.education-period {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.1);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.education-card h2 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin: 18px 0 10px;
+}
+
+.education-card h3 {
+  color: #a855f7;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.education-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.education-result span {
+  color: #71717a;
+  font-size: 0.8rem;
+}
+
+.education-result strong {
+  color: #ffffff;
+}
+
+/* Academic Focus */
+
+.academic-focus {
+  padding: 40px;
+}
+
+.academic-focus > h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.focus-card {
+  padding: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.focus-card > span {
+  color: #a855f7;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.focus-card h3 {
+  color: #ffffff;
+  margin: 12px 0;
+}
+
+.focus-card p {
+  color: #a1a1aa;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .education-page {
+    padding: 100px 20px 60px;
+  }
+
+  .education-timeline::before {
+    left: 22px;
+  }
+
+  .education-item,
+  .education-item.right,
+  .education-item.left {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 40px 65px;
+    text-align: left;
+  }
+
+  .education-item.left .timeline-dot,
+  .education-item.right .timeline-dot {
+    left: 0;
+    right: auto;
+  }
+
+  .timeline-dot {
+    width: 44px;
+    height: 44px;
+  }
+
+  .education-card {
+    padding: 25px 20px;
+  }
+
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-focus {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .education-card h2 {
+    font-size: 1.15rem;
+  }
+
+  .education-result {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* =========================================
+   COLORFUL EDUCATION CARDS
+========================================= */
+
+/* -----------------------------------------
+   EDUCATION CARD 1 - PURPLE
+----------------------------------------- */
+
+.education-item:nth-child(1) .education-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(168, 85, 247, 0.20),
+      rgba(88, 28, 135, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(168, 85, 247, 0.28);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(168, 85, 247, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.education-item:nth-child(1) .timeline-dot {
+  color: #d8b4fe;
+  border-color: rgba(168, 85, 247, 0.65);
+
+  background: rgba(88, 28, 135, 0.25);
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.35);
+}
+
+.education-item:nth-child(1) .education-period {
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.14);
+  border: 1px solid rgba(168, 85, 247, 0.22);
+}
+
+.education-item:nth-child(1) .education-card h3 {
+  color: #c084fc;
+}
+
+.education-item:nth-child(1) .education-card:hover {
+  border-color: rgba(192, 132, 252, 0.65);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(168, 85, 247, 0.18);
+}
+
+
+/* -----------------------------------------
+   EDUCATION CARD 2 - CYAN
+----------------------------------------- */
+
+.education-item:nth-child(2) .education-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6, 182, 212, 0.20),
+      rgba(8, 47, 73, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(34, 211, 238, 0.28);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(6, 182, 212, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.education-item:nth-child(2) .timeline-dot {
+  color: #a5f3fc;
+  border-color: rgba(34, 211, 238, 0.65);
+
+  background: rgba(8, 47, 73, 0.28);
+
+  box-shadow:
+    0 0 25px rgba(6, 182, 212, 0.35);
+}
+
+.education-item:nth-child(2) .education-period {
+  color: #a5f3fc;
+  background: rgba(6, 182, 212, 0.14);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+}
+
+.education-item:nth-child(2) .education-card h3 {
+  color: #67e8f9;
+}
+
+.education-item:nth-child(2) .education-card:hover {
+  border-color: rgba(103, 232, 249, 0.65);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(6, 182, 212, 0.18);
+}
+
+
+/* -----------------------------------------
+   EDUCATION CARD 3 - PINK
+----------------------------------------- */
+
+.education-item:nth-child(3) .education-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(236, 72, 153, 0.20),
+      rgba(80, 7, 36, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(244, 114, 182, 0.28);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(236, 72, 153, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.education-item:nth-child(3) .timeline-dot {
+  color: #fbcfe8;
+  border-color: rgba(244, 114, 182, 0.65);
+
+  background: rgba(80, 7, 36, 0.28);
+
+  box-shadow:
+    0 0 25px rgba(236, 72, 153, 0.35);
+}
+
+.education-item:nth-child(3) .education-period {
+  color: #fbcfe8;
+  background: rgba(236, 72, 153, 0.14);
+  border: 1px solid rgba(244, 114, 182, 0.22);
+}
+
+.education-item:nth-child(3) .education-card h3 {
+  color: #f472b6;
+}
+
+.education-item:nth-child(3) .education-card:hover {
+  border-color: rgba(249, 168, 212, 0.65);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(236, 72, 153, 0.18);
+}
+
+
+/* -----------------------------------------
+   EDUCATION CARD 4 - GREEN
+----------------------------------------- */
+
+.education-item:nth-child(4) .education-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 185, 129, 0.20),
+      rgba(6, 78, 59, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(52, 211, 153, 0.28);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(16, 185, 129, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.education-item:nth-child(4) .timeline-dot {
+  color: #a7f3d0;
+  border-color: rgba(52, 211, 153, 0.65);
+
+  background: rgba(6, 78, 59, 0.28);
+
+  box-shadow:
+    0 0 25px rgba(16, 185, 129, 0.35);
+}
+
+.education-item:nth-child(4) .education-period {
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+}
+
+.education-item:nth-child(4) .education-card h3 {
+  color: #34d399;
+}
+
+.education-item:nth-child(4) .education-card:hover {
+  border-color: rgba(110, 231, 183, 0.65);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(16, 185, 129, 0.18);
+}
+
+
+/* =========================================
+   COLORFUL EDUCATION RESULT
+========================================= */
+
+.education-item:nth-child(1) .education-result strong {
+  color: #d8b4fe;
+}
+
+.education-item:nth-child(2) .education-result strong {
+  color: #67e8f9;
+}
+
+.education-item:nth-child(3) .education-result strong {
+  color: #f9a8d4;
+}
+
+.education-item:nth-child(4) .education-result strong {
+  color: #6ee7b7;
+}
+
+
+/* =========================================
+   COLORFUL TIMELINE DOTS
+========================================= */
+
+.education-item:nth-child(1) .timeline-dot {
+  box-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 30px rgba(168, 85, 247, 0.25);
+}
+
+.education-item:nth-child(2) .timeline-dot {
+  box-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 30px rgba(6, 182, 212, 0.25);
+}
+
+.education-item:nth-child(3) .timeline-dot {
+  box-shadow:
+    0 0 10px rgba(236, 72, 153, 0.5),
+    0 0 30px rgba(236, 72, 153, 0.25);
+}
+
+.education-item:nth-child(4) .timeline-dot {
+  box-shadow:
+    0 0 10px rgba(16, 185, 129, 0.5),
+    0 0 30px rgba(16, 185, 129, 0.25);
+}
+
+
+/* =========================================
+   COLORFUL ACADEMIC FOCUS CARDS
+========================================= */
+
+/* Focus 1 - Purple */
+.focus-card:nth-child(1) {
+  background: linear-gradient(
+    145deg,
+    rgba(168, 85, 247, 0.13),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.focus-card:nth-child(1) > span {
+  color: #c084fc;
+}
+
+.focus-card:nth-child(1):hover {
+  border-color: rgba(192, 132, 252, 0.6);
+
+  box-shadow:
+    0 15px 35px rgba(168, 85, 247, 0.12);
+}
+
+
+/* Focus 2 - Cyan */
+.focus-card:nth-child(2) {
+  background: linear-gradient(
+    145deg,
+    rgba(6, 182, 212, 0.13),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border-color: rgba(34, 211, 238, 0.25);
+}
+
+.focus-card:nth-child(2) > span {
+  color: #67e8f9;
+}
+
+.focus-card:nth-child(2):hover {
+  border-color: rgba(103, 232, 249, 0.6);
+
+  box-shadow:
+    0 15px 35px rgba(6, 182, 212, 0.12);
+}
+
+
+/* Focus 3 - Pink */
+.focus-card:nth-child(3) {
+  background: linear-gradient(
+    145deg,
+    rgba(236, 72, 153, 0.13),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border-color: rgba(244, 114, 182, 0.25);
+}
+
+.focus-card:nth-child(3) > span {
+  color: #f9a8d4;
+}
+
+.focus-card:nth-child(3):hover {
+  border-color: rgba(249, 168, 212, 0.6);
+
+  box-shadow:
+    0 15px 35px rgba(236, 72, 153, 0.12);
+}
+
+
+/* =========================================
+   EXTRA COLORFUL GLOW
+========================================= */
+
+.education-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -100px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  filter: blur(40px);
+
+  pointer-events: none;
+
+  opacity: 0.45;
+}
+
+
+/* Purple glow */
+.education-item:nth-child(1) .education-card::after {
+  background: rgba(168, 85, 247, 0.25);
+}
+
+
+/* Cyan glow */
+.education-item:nth-child(2) .education-card::after {
+  background: rgba(6, 182, 212, 0.25);
+}
+
+
+/* Pink glow */
+.education-item:nth-child(3) .education-card::after {
+  background: rgba(236, 72, 153, 0.25);
+}
+
+
+/* Green glow */
+.education-item:nth-child(4) .education-card::after {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+
+/* Keep card content above glow */
+
+.education-card > * {
+  position: relative;
+  z-index: 2;
+}
